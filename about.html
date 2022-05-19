@@ -17,8 +17,8 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="home.html">CompanyBlog</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
             <div class="collapse navbar-collapse px-2" style="justify-content:space-between" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
                     <li>
@@ -37,64 +37,66 @@
                     <!-- Authentication  -->
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        username
-                        </a>
+                            username
+                            </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="dashboard">Dashboard
-                            </a>
+                                </a>
 
-                            <a class="dropdown-item">
-                             logout
-                            </a>
+                            <a id="logout" class="dropdown-item">
+                                 logout
+                                </a>
 
                         </div>
                     </li>
                     <li>
-                        <a class="nav-link active" href="posts/create">Create Post</a>
+                        <a class="nav-link active" href="create.html">Create Post</a>
                     </li>
 
                 </ul>
             </div>
         </div>
     </nav>
-
     <div class="container pt-3">
-        <div class="text-center">
-            <h1>Welcome To the blog!</h1>
-            <p>This is the CompanyBlog for Assessment</p>
-            <p><a class="btn btn-primary btn-lg" href="/blog" role="button">Login</a> <a class="btn btn-success btn-lg" href="/blog" role="button">blog</a></p>
-        </div>
+        <h1 class="pb-3">About this company</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget rhoncus justo. Donec ut tortor porta, mattis quam in, vestibulum ipsum. Nullam malesuada, erat id semper faucibus, ante ligula rutrum arcu, ac consequat erat neque vitae turpis. Aliquam
+            erat volutpat. Aliquam ullamcorper tempor quam, fringilla tempor mauris vulputate sit amet. Duis in luctus orci, id aliquet orci. Curabitur rhoncus massa dui. Donec vel elementum ante. Aliquam fermentum tempor commodo.
+        </p>
+        <p>
+            Cras lacus lacus, gravida quis enim vitae, iaculis facilisis nisi. Etiam commodo nibh luctus augue pulvinar, eget rhoncus elit vestibulum. Vestibulum sit amet dictum risus, et pellentesque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia curae; Integer malesuada libero nulla, sit amet feugiat velit condimentum nec. Aenean purus velit, tincidunt eget nulla nec, tristique scelerisque nisi. Morbi vitae gravida felis, vitae lacinia purus. Ut scelerisque
+            augue sit amet ultrices facilisis. Suspendisse accumsan scelerisque justo, in fermentum lorem condimentum id. Duis ipsum tortor, commodo at aliquet vitae, molestie quis dui.
+        </p>
     </div>
+
 </body>
 <script>
     // nav
-    let logged = true;
     let divauth = document.getElementById("auth");
 
-    //if user does not logged
-    if (!logged) {
+    const logout = () => {
         let li = document.createElement("li")
         li.classList = "nav-item"
         let a = document.createElement("a")
         a.classList = "nav-link active"
-        a.href = "login"
         a.innerText = "Login"
+        a.id = "login"
 
         //delete user's links
         divauth.innerHTML = ""
         li.appendChild(a);
         //add login link
         divauth.appendChild(li)
+        document.getElementById("login").addEventListener("click", () => {
+            location.reload();
+        });
     }
+    document.getElementById("logout").addEventListener("click", logout);
 </script>
 
 
-
-<script>
-    if (logged) {
-
-    }
-</script>
 
 </html>

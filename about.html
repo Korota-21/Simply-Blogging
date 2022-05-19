@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="style.css">
     <title>Company Blog</title>
 </head>
 
@@ -19,7 +19,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-            <div class="collapse navbar-collapse px-2" style="justify-content:space-between" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse px-2" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
                     <li>
                         <a class="nav-link active" href="home.html">Home</a>
@@ -61,42 +61,24 @@
     <div class="container pt-3">
         <h1 class="pb-3">About this company</h1>
 
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget rhoncus justo. Donec ut tortor porta, mattis quam in, vestibulum ipsum. Nullam malesuada, erat id semper faucibus, ante ligula rutrum arcu, ac consequat erat neque vitae turpis. Aliquam
-            erat volutpat. Aliquam ullamcorper tempor quam, fringilla tempor mauris vulputate sit amet. Duis in luctus orci, id aliquet orci. Curabitur rhoncus massa dui. Donec vel elementum ante. Aliquam fermentum tempor commodo.
-        </p>
-        <p>
-            Cras lacus lacus, gravida quis enim vitae, iaculis facilisis nisi. Etiam commodo nibh luctus augue pulvinar, eget rhoncus elit vestibulum. Vestibulum sit amet dictum risus, et pellentesque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et
-            ultrices posuere cubilia curae; Integer malesuada libero nulla, sit amet feugiat velit condimentum nec. Aenean purus velit, tincidunt eget nulla nec, tristique scelerisque nisi. Morbi vitae gravida felis, vitae lacinia purus. Ut scelerisque
-            augue sit amet ultrices facilisis. Suspendisse accumsan scelerisque justo, in fermentum lorem condimentum id. Duis ipsum tortor, commodo at aliquet vitae, molestie quis dui.
-        </p>
+        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the
+            lookout for this exact same string of text.</p>
+        <blockquote>
+            <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+        </blockquote>
+        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the
+            lookout for this exact same string of text.</p>
     </div>
+    <footer class=" mt-2 py-4 text-white bg-dark">
+        <div class="container row">
+            <div class="col">Blog built for <a href="">Combany name</a> by <a href="https://github.com/Korota-21">Marwa</a>.</div>
+            <div class="col" dir="rtl">
+                <a href="#">Back to top</a>
+            </div>
+        </div>
 
+    </footer>
 </body>
-<script>
-    // nav
-    let divauth = document.getElementById("auth");
-
-    const logout = () => {
-        let li = document.createElement("li")
-        li.classList = "nav-item"
-        let a = document.createElement("a")
-        a.classList = "nav-link active"
-        a.innerText = "Login"
-        a.id = "login"
-
-        //delete user's links
-        divauth.innerHTML = ""
-        li.appendChild(a);
-        //add login link
-        divauth.appendChild(li)
-        document.getElementById("login").addEventListener("click", () => {
-            location.reload();
-        });
-    }
-    document.getElementById("logout").addEventListener("click", logout);
-</script>
-
-
+<script src="js/main.js"></script>
 
 </html>
